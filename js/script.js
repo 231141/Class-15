@@ -1,3 +1,5 @@
+console.log("hello");
+
 let form = document.forms["my-form"];
 form.addEventListener("submit", getValues);
 
@@ -31,5 +33,30 @@ document.querySelector(".out code").innerHTML = out;
 
 
 alert("Hi " + formData.name + ". Thank you for you message");
+//PrintHello(formData.name);
 
+sessionStorage.setItem("userBio", formData.bio)
+PracticalJokeDahmYouStudentsAreQuiet();
+
+localStorage.setItem("userName", formData.name);
+
+}
+
+function PracticalJokeDahmYouStudentsAreQuiet() {
+    let temp1 = sessionStorage.getItem("userBio");
+    alert("Wow, I cried when you said: " + temp1)
+}
+
+function PracticalJokeDahmYouStudentsAreQuiet(nameToSave)
+{
+    console. log("Trying to Save User Name" + nameToSave); 
+    localStorage. setItem ("userName", nameToSave);  
+}
+
+function DisplaySavedUserName ()
+{
+let temp = localStorage.getItem ("userName");
+//alert ("Welcome back" + temp);
+console.log("The user said " + temp);
+//console.log("The user said" + sessionStorage.getItem("userBio"));
 }
